@@ -1,0 +1,205 @@
+*{
+    font-family: "Bona Nova SC" ,serif;
+    font: 16px;
+}
+  
+
+
+
+.login{
+    width: 620px;
+    height: 330px;
+    background-color: #4B2500;
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.regist{
+    margin-top: 20px;
+}
+.form{
+    padding: 40px 40px 5px 40px;
+    background-color: #4B2500;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.form label {
+    color: #fff;
+}
+
+.navbar-collapse{
+    display: flex;
+    display: inline;
+    position: absolute;
+    top: 40px;
+    z-index: 3;
+}
+
+
+.names input{
+    width: 461px;
+    height: 48px;
+    border-color: #B27A41;
+    border:  solid #B27A41 3px;
+    margin-top: 10px;
+    font-size: 16px;
+    margin-bottom: -5px;
+    margin: 15px;
+    background-color: #4B2500;
+    color: #B27A41;
+    padding-left: 10px;
+}
+
+
+.row label{
+    margin-left: 15px;
+}
+
+.click{
+    width: 218px;
+    height: 44px;
+    margin-top: 25px;
+    background-color: #4B2500;
+    border-color: #B27A41;
+    border:  solid #B27A41 3px;
+    color: white;
+    font-size: 16px;
+    align-items: center;
+    text-align: center;
+}
+
+.click:hover{
+    background-color: #B27A41;
+    transition: 0.4s;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+}
+
+.check{
+    margin-left:10px;
+    margin-bottom: 10px;
+}
+
+.invalid-feedback{
+    margin-left: 13px;
+}
+
+.passvor{
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.btn-link{
+    margin-left: 15px;
+}
+
+.btn-primary{
+    border: solid #B27A41 2px;
+    background-color: #4B2500;
+    border-radius: 3px;
+    color: white;
+    padding:5px 10px 5px 10px;
+}
+
+.btn-primary:hover{
+    background-color: #B27A41;
+    transition: 0.4s;
+}
+
+.btn-link{
+    color: #B27A41;
+    text-decoration: none;
+}
+.container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.navbar-collapse ul li{
+    display: inline;
+}
+
+.ms-auto li{
+    margin-right: 30px;
+}
+
+.nav-link{
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.dropdown-item{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+
+.col-md-6{
+    margin-bottom: 15px;
+}
+
+.col-md-0 input{
+    border-color: #B27A41;
+    background-color: #4B2500;
+    width: 175px;
+    height: 20px;
+    border-radius: 2px;
+    color: white;
+}
+
+.mb-3{
+    margin-top: 10px;
+}
+
+.text-md-end{
+    margin-left: -10px;
+}
+
+.card{
+    width: 500px;
+    height: 350px;
+    border: solid #B27A41 3px;
+    border-color: #B27A41;
+    border-radius: 5px;
+    background-color: #4B2500;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
+
+.col-md-6{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.invalid-feedback{
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.form-control{
+    margin-top: 10px;
+}
+
+.form-check input{
+    margin-left: -70px;
+    margin-right: -80px;
+}
+
+.form-check{
+    display: flex;
+    align-items: center;
+}
