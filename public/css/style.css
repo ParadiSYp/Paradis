@@ -4,16 +4,7 @@
 }
   
 
-.regist{
-    width: 620px;
-    height: 550px;
-    background-color: #4B2500;
-    color: white;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    padding-top: 40px;
-}
+
 
 .login{
     width: 620px;
@@ -25,12 +16,31 @@
     justify-content: center;
     padding-top: 40px;
 }
+
+.regist{
+    margin-top: 20px;
+}
 .form{
+    padding: 40px 40px 5px 40px;
+    background-color: #4B2500;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
-    margin-top: px;
-
+    position: relative;
 }
+.form label {
+    color: #fff;
+}
+
+.navbar-collapse{
+    display: flex;
+    display: inline;
+    position: absolute;
+    top: 40px;
+    z-index: 3;
+}
+
+
 .names input{
     width: 461px;
     height: 48px;
@@ -38,6 +48,7 @@
     border:  solid #B27A41 3px;
     margin-top: 10px;
     font-size: 16px;
+    margin-bottom: -5px;
     margin: 15px;
     background-color: #4B2500;
     color: #B27A41;
@@ -52,7 +63,7 @@
 .click{
     width: 218px;
     height: 44px;
-    margin-top: 39px;
+    margin-top: 25px;
     background-color: #4B2500;
     border-color: #B27A41;
     border:  solid #B27A41 3px;
@@ -112,10 +123,7 @@
     display: flex;
     justify-content: center;
 }
-.navbar-collapse{
-    display: flex;
-    display: inline;
-}
+
 
 .navbar-collapse ul li{
     display: inline;
@@ -126,7 +134,7 @@
 }
 
 .nav-link{
-    color: black;
+    color: white;
     font-size: 25px;
     text-decoration: none;
 }
@@ -152,7 +160,7 @@
 }
 
 .mb-3{
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .text-md-end{
@@ -160,8 +168,8 @@
 }
 
 .card{
-    width: 250px;
-    height: 190px;
+    width: 500px;
+    height: 350px;
     border: solid #B27A41 3px;
     border-color: #B27A41;
     border-radius: 5px;
@@ -169,7 +177,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding-top: 20px;
+    padding-top: 50px;
 }
 
 .col-md-6{

@@ -8,8 +8,6 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="form">
-                
-
                 <div class="regist">
                 @extends('layouts.app')
                     <form method="POST" action="{{ route('register') }}">
