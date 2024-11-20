@@ -6,8 +6,8 @@
 }
 
 body {
-    font-family: "Bona Nova SC" ,serif;
-    background-color: #fff;
+    font-family: Arial, sans-serif;
+    background-color: #4c2b1e;
 }
 
 .header {
@@ -35,7 +35,7 @@ body {
 .navbar ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .navbar-header{
@@ -68,14 +68,132 @@ body {
 
 .overlay {
     color: #fff;
+    align-items: center;
 }
 
-.overlay h1 {
-    font-size: 3em;
-    font-weight: bold;
+.overlay h1{
+    font-size: 64px;
+    font-weight: medium;
 }
 
-.overlay p {
-    font-size: 1.2em;
-    max-width: 800px;
+.overlay p{
+    font-size: 22px;
+    max-width: 830px;
+    line-height: 28px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+
+
+
+.reservation{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 750px;
+}
+.reservation-form{
+    display: flex;
+    gap: 20px;
+}
+
+.click button{
+    border: solid #B27A41 2px;
+    background-color:#B27A41;
+    color: white;
+    font-size: 13px;
+    width: 223px;
+    height: 67px;
+    margin-top: 51px;
+}
+
+.click button:hover{
+    background-color: #B27A41;
+    transition: 0.3s;
+    color: #FFC300;
+    box-shadow: 0 0 15px #B27A41;
+}
+
+
+.labe{
+    margin-top: 15px;
+}
+
+.labe label{
+    color: #fff;
+    font-size: 15px;
+}
+
+.labe input{
+    margin-top: 15px;
+    border: solid #B27A41 4px;
+    background-color: #4c2b1e;
+    padding-left: 15px;
+    width: 223px;
+    height: 67px;
+    font-size: 13px;
+    color: #796565;
+    font-family: "Bona Nova SC" ,serif;
+}
+
+
+ .tex h2{
+    line-height: 60px;
+    font-size: 36;
+    max-width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 15px 0px;
+}
+
+.tex p{
+    color: #B27A41;
+    font-size: 20px;
+    max-width: 710px;
+    line-height: 24px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.about-us {
+    margin-top: 100px;
+    padding: 50px;
+    background-image: url("/img/fone1.png");
+    background-repeat: no-repeat;
+    background-position: 75px 30px;
+}
+
+.about-content {
+    padding: 100px 0 0 100px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    
+}
+
+
+.contents h2 {
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.contents p{
+    font-size: 15px;
+    line-height: 18px;
+    max-width: 350px;
+    text-align: left;
+    color: #B27A41;
+    font-family: "Bona Nova SC" ,serif;
+}
+
+.about-image img {
+    width: 1100px;
+
+}
+
+input{
+
 }

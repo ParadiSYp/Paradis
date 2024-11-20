@@ -6,7 +6,7 @@
     <title>Paradis - French Restaurant</title>
     <link rel="stylesheet" href="{{ asset('css/style1.css') }}">
 </head>
-<body>
+<br>
     <!-- Navigation Bar -->
     <header class="header">
         <nav class="navbar">
@@ -23,7 +23,7 @@
                     </ul>
                 </div>
                 <div class="user-icon">
-                    <a href="login"><img src="{{ asset('img/icon.svg') }}" alt="User Icon"></a>
+                    <a href="login"><img class="icons" src="{{ asset('img/icon.svg') }}" alt="User Icon"></a>
                 </div>
             </div>
         </nav>
@@ -39,5 +39,49 @@
             <p>В нашем ресторане вы сможете насладиться истинными шедеврами французской кухни и погрузиться в атмосферу романтики Франции.</p>
         </div>
     </main>
+
+
+    <section class="reservation">
+        <div class="tex">
+            <h2>Reserve Your Table</h2>
+            <p>Забронируйте столик заранее, чтобы насладиться лучшими блюдами нашего шеф-повара и расположиться в уютной обстановке.</p>
+        </div>
+        <div class="forma">  
+            <form class="reservation-form">
+                <div class="labe">
+                    <label>Ваше имя</label>
+                    <input type="text" name="name" placeholder="Ваше имя" value="Иван" required>
+                </div>
+                <div class="labe">
+                    <label>Количество персон</label>
+                    <input type="number" name="guests" placeholder="Количество персон" value="4" required>
+                </div>
+                <div class="labe">
+                    <label>Дата</label>
+                    <input type="date" name="date" value="2024-01-01" required>
+                </div>
+                <div class="labe"> 
+                    <label>Время</label>
+                    <input type="time" name="time" value="16:00" required>
+                </div>
+                <div class="click">
+                    <button type="submit">Забронировать столик</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <div class="about-content">
+            <div class="contents">
+                <h2>About Us</h2>
+                <p>Ресторан «Paradis» — это уголок Франции в самом центре города. Мы приглашаем вас насладиться изысканными блюдами французской кухни, созданными из ингредиентов с вниманием к каждой детали. Каждое посещение — это уникальный гастрономический опыт, наполненный вкусами и ароматами, которые перенесут вас на улочки Парижа.</p>
+            </div>
+            <div>
+                <img src="img/povar.png" alt="Restourant povar">
+            </div>
+        </div>
+    </section>
 </body>
 </html>
