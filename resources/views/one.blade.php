@@ -23,7 +23,7 @@
                     </ul>
                 </div>
                 <div class="user-icon">
-                    <a href="#"><img src="{{ asset('img/icon.svg') }}" alt="User Icon"></a>
+                    <a href="login"><img src="{{ asset('img/icon.svg') }}" alt="User Icon"></a>
                 </div>
             </div>
         </nav>
