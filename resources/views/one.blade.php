@@ -155,5 +155,27 @@
             </div>
         </div>
     </section>
+
+    <!-- Highlights Section -->
+    <section class="highlights">
+        <div class="highlight">
+            <img src="{{ asset('img/info1.svg') }}" alt="Drinks">
+            <h3>Напитки на любой вкус</h3>
+            <p>В нашем барном меню есть всё — от жареного эфиопского кофе до любых алкогольных напитков...</p>
+        </div>
+        <div class="highlight">
+            <img src="{{ asset('img/info2.svg') }}" alt="Comfort Zone">
+            <h3>Уютная, просторная зона!</h3>
+            <p>Наслаждайтесь нашими индивидуальными стендами, которые расположены в наших просторных, хорошо освещенных залах...</p>
+        </div>
+        <div class="highlight">
+            <img src="{{ asset('img/img3.svg') }}" alt="Variety of Menu">
+            <h3>Разнообразное меню</h3>
+            <p>У нас есть как мясные, так и вегетарианские блюда, а также вкусные десерты!</p>
+        </div>
+    </section>
+
+
+    
 </body>
 </html>
