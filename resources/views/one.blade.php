@@ -79,35 +79,68 @@
         </div>
     </main>
 
-
     <section class="reservation">
         <div class="tex">
             <h2>Reserve Your Table</h2>
             <p>Забронируйте столик заранее, чтобы насладиться лучшими блюдами нашего шеф-повара и расположиться в уютной обстановке.</p>
         </div>
-        <div class="forma">  
-            <form class="reservation-form">
+        <div class="forma">
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <form id="reservation-form">
+                @csrf
                 <div class="labe">
-                    <label>Ваше имя</label>
-                    <input type="text" name="name" placeholder="Ваше имя" value="Иван" required>
+                    <label>Ваше имя:</label>
+                    <input type="text" name="name" placeholder="Ваше имя" required><br>
                 </div>
                 <div class="labe">
-                    <label>Количество персон</label>
-                    <input type="number" name="guests" placeholder="Количество персон" value="4" required>
+                    <label>Количество персон:</label>
+                    <input type="number" name="guests" placeholder="Количество персон" required><br>
                 </div>
                 <div class="labe">
-                    <label>Дата</label>
-                    <input type="date" name="date" value="2024-01-01" required>
+                    <label>Дата:</label>
+                    <input type="date" name="date" required><br>
                 </div>
-                <div class="labe"> 
-                    <label>Время</label>
-                    <input type="time" name="time" value="16:00" required>
+                <div class="labe">
+                    <label>Время:</label>
+                    <input type="time" name="time" required><br>
                 </div>
                 <div class="click">
                     <button type="submit">Забронировать столик</button>
                 </div>
             </form>
         </div>
+        <div id="message"></div>
+        <script>
+            $(document).ready(function() {
+                $('#reservation-form').on('submit', function(e) {
+                    e.preventDefault(); // Предотвращаем стандартное поведение формы
+    
+                    $.ajax({
+                        type: 'POST',
+                        url: '{{ route("reserve.store") }}',
+                        data: $(this).serialize(),
+                        success: function(response) {
+                            $('#message').html('<p style="color: green;">' + response.success + '</p>');
+                            $('#reservation-form')[0].reset(); // Сбрасываем форму
+                        },
+                        error: function(xhr) {
+                            if (xhr.status === 401) {
+                                // Если пользователь не аутентифицирован, перенаправляем на страницу входа
+                                window.location.href = '{{ route("login") }}';
+                            } else {
+                                let errors = xhr.responseJSON.errors;
+                                let errorMessage = '<p style="color: red;">Пожалуйста, исправьте следующие ошибки:</p><ul>';
+                                $.each(errors, function(key, value) {
+                                    errorMessage += '<li>' + value[0] + '</li>'; // Показываем только первое сообщение об ошибке
+                                });
+                                errorMessage += '</ul>';
+                                $('#message').html(errorMessage);
+                            }
+                        }
+                    });
+                });
+            });
+        </script>
     </section>
 
     <!-- About Us Section -->
