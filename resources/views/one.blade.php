@@ -11,19 +11,24 @@
     <header class="header">
         <nav class="navbar">
             <div class="navbars">
+                <div class="time">
+                    <p>Время работы: 10:00 - 00:00</p>
+                    <p>Адрес: Раиса Беляева 45А</p>
+                </div>
                 <div class="navbar-header">
                     <ul>
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Menu</a></li>
-                        <li><a href="#">Delivery</a></li>
                         <img src="img/logo.svg">
-                        <li><a href="#">Chefs</a></li>
+                        <li><a href="#">Delivery</a></li>
                         <li><a href="#">Reviews</a></li>
-                        <li><a href="#">Contacts</a></li>
                     </ul>
                 </div>
                 <div class="user-icon">
-                    <a href="login"><img class="icons" src="{{ asset('img/icon.svg') }}" alt="User Icon"></a>
+                    <div>
+                        <a href="login"><img class="icons" src="{{ asset('img/corzina.svg') }}" alt="User Icon"></a>
+                        <a href="login"><img class="icons" src="{{ asset('img/icon.svg') }}" alt="User Icon"></a>
+                    </div>
                     @guest
                     <div class="line">
                         @if (Route::has('login'))
@@ -31,8 +36,7 @@
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Вход') }}</a>
                             </li>
                         @endif
-                        <div class="lines">
-                            
+                        <div class="lines">    
                         </div>     
                         @if (Route::has('register'))
                             <li class="nav-item">
@@ -50,7 +54,7 @@
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                                {{ __('Выйти') }}
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

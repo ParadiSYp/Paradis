@@ -12,7 +12,7 @@ body {
 
 .header {
     background-color: #4c2b1e;
-    padding: 20px 0;
+    padding-bottom: 20px;
 }
 
 
@@ -21,7 +21,7 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    padding: 0 180px;
+    padding: 0 100px;
 
 }
 
@@ -35,7 +35,7 @@ body {
 .navbar ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .navbar-header{
@@ -45,6 +45,44 @@ body {
 .user-icon img {
     width: 30px;
     height: 30px;
+}
+
+
+.user-icon{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.line li{
+    list-style: none;
+    text-decoration: none;
+}
+
+.line li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown{
+    list-style: none;
+    text-decoration: none;
+}
+.time p{
+    color: #fff;
+    font-size: 15px;
+}
+
+.dropdown-toggle{
+    color: #fff;
+    text-decoration: none;
+    font-size: ;
+}
+
+.dropdown-item{
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
 }
 
 .main-content {
@@ -92,11 +130,15 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 auto;
-    max-width: 750px;
+    padding: 0 50px;
 }
+
 .reservation-form{
     display: flex;
+    flex-wrap: wrap;
+    max-width: 1300px;
     gap: 20px;
+
 }
 
 .click button{
@@ -104,7 +146,7 @@ body {
     background-color:#B27A41;
     color: white;
     font-size: 13px;
-    width: 223px;
+    width: 200px;
     height: 67px;
     margin-top: 51px;
 }
@@ -119,6 +161,7 @@ body {
 
 .labe{
     margin-top: 15px;
+    max-width: 223px;
 }
 
 .labe label{
@@ -131,7 +174,7 @@ body {
     border: solid #B27A41 4px;
     background-color: #4c2b1e;
     padding-left: 15px;
-    width: 223px;
+    width: 210px;
     height: 67px;
     font-size: 13px;
     color: #796565;
@@ -141,11 +184,12 @@ body {
 
  .tex h2{
     line-height: 60px;
-    font-size: 36;
+    font-size: 36px;
     max-width: 400px;
     text-align: center;
     margin: 0 auto;
     padding: 15px 0px;
+    color: #fff;
 }
 
 .tex p{
@@ -191,9 +235,4 @@ body {
 
 .about-image img {
     width: 1100px;
-
-}
-
-input{
-
 }
