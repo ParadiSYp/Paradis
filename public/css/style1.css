@@ -30,12 +30,18 @@ body {
     display: flex;
     align-items: center;
     gap: 40px;
+    padding-top: 20px;
 }
 
 .navbar ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 15px;
+}
+
+.navbar ul li a:hover{
+    opacity: 0.5;
+    transition: 0.4s;
 }
 
 .navbar-header{
@@ -64,10 +70,22 @@ body {
     text-decoration: none;
 }
 
+
+.line li a:hover{
+    opacity: 0.5;
+    transition: 0.4s;
+}
+
 .dropdown{
     list-style: none;
     text-decoration: none;
 }
+
+.dropdown a:hover{
+    opacity: 0.5;
+    transition: 0.4s;
+}
+
 .time p{
     color: #fff;
     font-size: 15px;
@@ -293,5 +311,3 @@ body {
     padding-top: 17px;
     color: #B27A41;
 }
-
-
