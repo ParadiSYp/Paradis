@@ -96,38 +96,38 @@
             <button class="category-btn" data-category="desserts">Десерты</button>
         </div>
 
-     <!-- Карточки -->
-     <div class="cards-container">
-        @foreach ($dishes as $category => $items)
-            <div class="cards hidden" id="{{ $category }}">
-                @foreach ($items as $dish)
-                    <div class="card">
-                        <img src="{{ asset('images/' . $dish['image']) }}" alt="{{ $dish['name'] }}">
-                        <h3>{{ $dish['name'] }}</h3>
-                        <p>{{ $dish['description'] }}</p>
-                        <p class="price">{{ $dish['price'] }} РУБ.</p>
-                        <button>В корзину</button>
-                    </div>
-                @endforeach
-            </div>
-        @endforeach
+        <!-- Карточки -->
+        <div class="cards-container">
+            @foreach ($dishes as $category => $items)
+                <div class="cards hidden" id="{{ $category }}">
+                    @foreach ($items as $dish)
+                        <div class="card">
+                            <img src="{{ asset('images/' . $dish['image']) }}" alt="{{ $dish['name'] }}">
+                            <h3>{{ $dish['name'] }}</h3>
+                            <p>{{ $dish['description'] }}</p>
+                            <p class="price">{{ $dish['price'] }} РУБ.</p>
+                            <button>В корзину</button>
+                        </div>
+                    @endforeach
+                </div>
+            @endforeach
+        </div>
     </div>
-</div>
-<script>
-    // Переключение категорий
-    const buttons = document.querySelectorAll('.category-btn');
-    const cards = document.querySelectorAll('.cards');
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Скрыть все карточки
-            cards.forEach(card => card.classList.add('hidden'));
-            // Показать выбранную категорию
-            const category = button.getAttribute('data-category');
-            document.getElementById(category).classList.remove('hidden');
+    <script>
+        // Переключение категорий
+        const buttons = document.querySelectorAll('.category-btn');
+        const cards = document.querySelectorAll('.cards');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Скрыть все карточки
+                cards.forEach(card => card.classList.add('hidden'));
+                // Показать выбранную категорию
+                const category = button.getAttribute('data-category');
+                document.getElementById(category).classList.remove('hidden');
+            });
         });
-    });
-    // Показать первую категорию по умолчанию
-    document.getElementById('soups').classList.remove('hidden');
+        // Показать первую категорию по умолчанию
+        document.getElementById('soups').classList.remove('hidden');
 </script>
 </body>
 </html>
