@@ -18,8 +18,8 @@
                 <div class="navbar-header">
                     <ul>
                         <li><a href="#">About Us</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <img src="img/logo.svg">
+                        <li><a href="menu">Menu</a></li>
+                        <a href="/"><img src="img/logo.svg"></a>
                         <li><a href="#">Delivery</a></li>
                         <li><a href="#">Reviews</a></li>
                     </ul>

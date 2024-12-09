@@ -21,8 +21,8 @@
                 <div class="navbar-header">
                     <ul>
                         <li><a href="#">About Us</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <img src="img/logo.svg">
+                        <li><a href="menu">Menu</a></li>
+                        <a href="/"><img src="img/logo.svg"></a>
                         <li><a href="#">Delivery</a></li>
                         <li><a href="#">Reviews</a></li>
                     </ul>
@@ -96,25 +96,29 @@
             <button class="category-btn" data-category="desserts">Десерты</button>
         </div>
 
-        <!-- Карточки -->
+       <!-- Карточки -->
+        @if(isset($dishes) && $dishes->isNotEmpty())
         <div class="cards-container">
             @foreach ($dishes as $category => $items)
                 <div class="cards hidden" id="{{ $category }}">
-                    @foreach ($items as $dish)
+                    <h2>{{ ucfirst($category) }}</h2> <!-- Заголовок для категории -->
+                    @foreach ($items as $dish) <!-- Используем $dish для ясности -->
                         <div class="card">
-                            <img src="{{ asset('images/' . $dish['image']) }}" alt="{{ $dish['name'] }}">
-                            <h3>{{ $dish['name'] }}</h3>
-                            <p>{{ $dish['description'] }}</p>
-                            <p class="price">{{ $dish['price'] }} РУБ.</p>
+                            <img src="{{ asset('images/' . $dish->image) }}" alt="{{ $dish->name }}">
+                            <h3>{{ $dish->name }}</h3>
+                            <p>{{ $dish->description }}</p>
+                            <p class="price">{{ $dish->price }} РУБ.</p>
                             <button>В корзину</button>
                         </div>
                     @endforeach
                 </div>
             @endforeach
         </div>
-    </div>
+        @else
+        <p>Нет доступных блюд.</p>
+        @endif
 
-    <script>
+        <script>
         // Переключение категорий
         const buttons = document.querySelectorAll('.category-btn');
         const cards = document.querySelectorAll('.cards');
@@ -130,10 +134,5 @@
             });
         });
 
-        // Показать первую категорию по умолчанию
-        document.getElementById('soups').classList.remove('hidden');
-    </script>
-
-
-</body>
+    </body>
 </html>
