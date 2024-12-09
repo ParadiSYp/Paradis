@@ -1,0 +1,313 @@
+/* public/css/style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #4c2b1e;
+}
+
+.header {
+    background-color: #4c2b1e;
+    padding-bottom: 20px;
+}
+
+
+.navbars {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 100px;
+
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-top: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.navbar ul li a:hover{
+    opacity: 0.5;
+    transition: 0.4s;
+}
+
+.navbar-header{
+    margin: 0 auto;
+}
+
+.user-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+
+.user-icon{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.line li{
+    list-style: none;
+    text-decoration: none;
+}
+
+.line li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.line li a:hover{
+    opacity: 0.5;
+    transition: 0.4s;
+}
+
+.dropdown{
+    list-style: none;
+    text-decoration: none;
+}
+
+.dropdown a:hover{
+    opacity: 0.5;
+    transition: 0.4s;
+}
+
+.time p{
+    color: #fff;
+    font-size: 15px;
+}
+
+.dropdown-toggle{
+    color: #fff;
+    text-decoration: none;
+    font-size: ;
+}
+
+.dropdown-item{
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.main-content {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.overlay {
+    color: #fff;
+    align-items: center;
+}
+
+.overlay h1{
+    font-size: 64px;
+    font-weight: medium;
+}
+
+.overlay p{
+    font-size: 22px;
+    max-width: 830px;
+    line-height: 28px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+
+
+
+.reservation{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.reservation-form{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    gap: 20px;
+}
+
+.forma{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    gap: 20px;
+}
+
+.click button{
+    border: solid #B27A41 2px;
+    background-color:#B27A41;
+    color: white;
+    font-size: 13px;
+    width: 200px;
+    height: 67px;
+    margin-top: 51px;
+}
+
+.click button:hover{
+    background-color: #B27A41;
+    transition: 0.3s;
+    color: #FFC300;
+    box-shadow: 0 0 15px #B27A41;
+}
+
+
+.labe{
+    margin-top: 15px;
+    max-width: 223px;
+}
+
+.labe label{
+    color: #fff;
+    font-size: 15px;
+}
+
+.labe input{
+    margin-top: 15px;
+    border: solid #B27A41 4px;
+    background-color: #4c2b1e;
+    padding-left: 15px;
+    width: 210px;
+    height: 67px;
+    font-size: 13px;
+    color: #796565;
+    font-family: "Bona Nova SC" ,serif;
+}
+
+
+ .tex h2{
+    line-height: 60px;
+    font-size: 36px;
+    max-width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 15px 0px;
+    color: #fff;
+}
+
+.tex p{
+    color: #B27A41;
+    font-size: 20px;
+    max-width: 710px;
+    line-height: 24px;
+    text-align: center;
+    padding-bottom: 15px;
+    margin: 0 auto;
+}
+
+.push{
+    text-align: center;
+    margin-top: 25px;
+    font-size: 15px;
+    color: #fff;
+}
+
+
+.about-us {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 80px;
+    background-image: url("/img/fone1.png");
+    background-repeat: no-repeat;
+    background-position: 250px 50px;
+}
+
+.about-content {
+    padding: 100px 0 0 100px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    
+}
+
+
+.contents h2 {
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.contents p{
+    font-size: 15px;
+    line-height: 18px;
+    max-width: 350px;
+    text-align: left;
+    color: #B27A41;
+    font-family: "Bona Nova SC" ,serif;
+}
+
+.about-image img {
+    width: 1100px;
+}
+
+
+.highlights {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 50px;
+    background-color: #4c2b1e;
+    color: #fff;
+    text-align: center;
+    gap: 80px;
+}
+
+.highlight {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    width: 345px;
+    height: 304px;
+    border-color: #B27A41;
+    border: #B27A41 solid 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.highlight img {
+    width: 120px;
+    padding-top: 23px;
+    margin-bottom: 10px;
+}
+
+.highlight h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding-top: 17px;
+}
+
+.highlight p{
+    font-size: 15px;
+    padding-top: 17px;
+    color: #B27A41;
+}
