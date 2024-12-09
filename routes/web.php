@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\DishController;
+use App\Http\Controllers\CartController;
 
 Auth::routes();
 
@@ -16,3 +17,4 @@ Route::get('/', function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('/reserve', [ReservationController::class, 'store'])->name('reserve.store');
 Route::get('/menu', [DishController::class, 'index'])->name('dishes.index');
+
