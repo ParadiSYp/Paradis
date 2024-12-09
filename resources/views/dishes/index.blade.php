@@ -83,9 +83,10 @@
     </main>
 
     <div class="container">
-        <h1>Perhaps you will like one of our dishes</h1>
+        <div class="tex">
+        <h2>Perhaps you will like one of our dishes</h2>
         <p class="subtitle">Каждое блюдо создано с вниманием и любовью, чтобы передать традиции и мастерство мировых производителей, славящихся Францией.</p>
-
+        </div>
         <!-- Навигация по категориям -->
         <div class="navigation">
             <button class="category-btn" data-category="soups">Супы</button>
@@ -105,8 +106,10 @@
                             <img src="{{ asset('images/' . $dish['image']) }}" alt="{{ $dish['name'] }}">
                             <h3>{{ $dish['name'] }}</h3>
                             <p>{{ $dish['description'] }}</p>
-                            <p class="price">{{ $dish['price'] }} РУБ.</p>
-                            <button>В корзину</button>
+                            <div class="price-button-container">
+                                <p class="price">{{ $dish['price'] }} РУБ.</p>
+                                <button>В корзину</button>
+                            </div>
                         </div>
                     @endforeach
                 </div>

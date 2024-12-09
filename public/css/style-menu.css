@@ -1,6 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #5a2e0f;
+    background: #4B2500;
     color: white;
     margin: 0;
     padding: 0;
@@ -23,13 +22,17 @@ h1 {
 }
 
 .navigation {
+
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .navigation button {
-    background: #a3570c;
+    font-family: "Bona Nova SC, sans-serif";
+    text-transform: uppercase;
+    background: #B27A41;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -39,7 +42,7 @@ h1 {
 }
 
 .navigation button:hover {
-    background: #bf6b1f;
+    background: #76512c;
 }
 
 .cards {
@@ -50,31 +53,47 @@ h1 {
 }
 
 .card {
-    background: #fff;
-    color: #000;
-    border-radius: 10px;
+    font-family: "Bona Nova SC, sans-serif";
+    background: #B27A41;
+    color: #fff;
     width: 300px;
-    text-align: center;
+    text-align: left; /* Текст выравнен по левому краю */
     padding: 15px;
+    display: flex; /* Используем flexbox для выравнивания содержимого */
+    flex-direction: column; /* Вертикальное расположение элементов */
 }
 
 .card img {
     width: 100%;
-    border-radius: 10px;
     margin-bottom: 10px;
 }
 
 .card h3 {
     margin-bottom: 10px;
+    font-size: 20px; /* Размер заголовка h3 */
 }
 
 .card p {
     margin: 5px 0;
+    font-size: 10px;
+    line-height: 18px;
+}
+
+.price-button-container {
+    display: flex; /* Используем flexbox для выравнивания цены и кнопки */
+    justify-content: space-between; /* Распределяем пространство между элементами */
+    align-items: center; /* Выравниваем по центру по вертикали */
+    margin-top: auto; /* Сдвигаем контейнер вниз карточки */
 }
 
 .card .price {
     font-weight: bold;
-    margin-bottom: 10px;
+    font-size: 20px; /* Размер цены */
+}
+
+.price {
+    font-size: 24px; /* Размер текста цены */
+    color: #FFC300;
 }
 
 .hidden {
@@ -82,13 +101,14 @@ h1 {
 }
 
 .card button {
-    background-color: #a3570c;
-    color: #fff;
-    padding: 10px 25px 10px 25px;
-    border-color: #fff;
+    background-color: #4B2500; /* Коричневый цвет кнопки */
+    text-transform: uppercase;
+    color: #fff; /* Белый текст кнопки */
+    padding: 10px 25px;
 }
 
-.card button:hover{
-    opacity: 0.7;
+.card button:hover {
+    color: #FFC300; /* Белый текст кнопки */
     transition: 0.3s;
+    box-shadow: 0 0 15px #4B2500;
 }

@@ -1,10 +1,12 @@
-*{
-    font-family: "Bona Nova SC" ,serif;
-    font: 16px;
+body {
+    background-color: #4B2500;
 }
-  
 
-
+p, a, label, input, button {
+    font-family: "Bona Nova SC, sans-serif";
+    font-size: 15px;
+    text-transform: uppercase;
+}
 
 .login{
     width: 520px;
@@ -105,12 +107,14 @@
 }
 
 .btn-primary{
-    border: solid #B27A41 2px;
+    border: solid #B27A41 2px; /* Упрощено */
     background-color:#B27A41;
     color: white;
-    font-size: 15px;
-    padding:8px 15px 8px 15px;
-    width: 150px;
+    width: 200px;
+    height: 50px;
+    margin-top: 51px;
+    text-transform: uppercase;
+
 }
 
 .btn-primary:hover{
@@ -119,6 +123,7 @@
     color: #FFC300;
     box-shadow: 0 0 15px #B27A41;
 }
+
 
 .line{
     display: flex;

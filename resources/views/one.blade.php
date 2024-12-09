@@ -36,8 +36,8 @@
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Вход') }}</a>
                             </li>
                         @endif
-                        <div class="lines">    
-                        </div>     
+                        <div class="lines">
+                        </div>
                         @if (Route::has('register'))
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('register') }}">{{ __('Регистрация') }}</a>
@@ -90,11 +90,11 @@
                     @csrf
                     <div class="labe">
                         <label>Ваше имя:</label>
-                        <input type="text" name="name" placeholder="Ваше имя" required><br>
+                        <input type="text" name="name" placeholder="Иван" required><br>
                     </div>
                     <div class="labe">
                         <label>Количество персон:</label>
-                        <input type="number" name="guests" placeholder="Количество персон" required><br>
+                        <input type="number" name="guests" placeholder="2" required><br>
                     </div>
                     <div class="labe">
                         <label>Дата:</label>
@@ -115,7 +115,7 @@
             $(document).ready(function() {
                 $('#reservation-form').on('submit', function(e) {
                     e.preventDefault(); // Предотвращаем стандартное поведение формы
-    
+
                     $.ajax({
                         type: 'POST',
                         url: '{{ route("reserve.store") }}',
@@ -176,6 +176,6 @@
     </section>
 
 
-    
+
 </body>
 </html>

@@ -3,11 +3,39 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Добавлено для лучшего управления размерами элементов */
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #4c2b1e;
+    background-color: #4B2500;
+}
+
+
+p, a, label, input {
+    font-family: "Bona Nova SC, sans-serif";
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+button{
+    font-family: "Bona Nova SC, sans-serif";
+    font-size: 15px;
+}
+
+h1 {
+    font-family: 'Highnessa DEMO', sans-serif;
+    font-size: 64px;
+}
+
+h2 {
+    font-family: 'Highnessa DEMO', sans-serif;
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 300; /* Устанавливаем тонкий шрифт */
 }
 
 .header {
@@ -15,14 +43,12 @@ body {
     padding-bottom: 20px;
 }
 
-
 .navbars {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
     padding: 0 100px;
-
 }
 
 .navbar ul {
@@ -33,18 +59,17 @@ body {
     padding-top: 20px;
 }
 
-.navbar ul li a {
+.navbar ul li a  {
     color: #fff;
     text-decoration: none;
-    font-size: 15px;
 }
 
-.navbar ul li a:hover{
-    opacity: 0.5;
+.navbar ul li a:hover {
+    color: #B27A41;
     transition: 0.4s;
 }
 
-.navbar-header{
+.navbar-header {
     margin: 0 auto;
 }
 
@@ -53,59 +78,52 @@ body {
     height: 30px;
 }
 
-
-.user-icon{
+.user-icon {
     display: flex;
     justify-content: center;
     gap: 15px;
 }
 
-.line li{
-    list-style: none;
-    text-decoration: none;
+.line li {
+    list-style: none; /* Это правило избыточно, так как оно уже применяется к ul */
 }
 
-.line li a{
+.line li a {
     color: #fff;
     text-decoration: none;
 }
 
-
-.line li a:hover{
-    opacity: 0.5;
+.line li a:hover {
+    color: #B27A41;
     transition: 0.4s;
 }
 
-.dropdown{
-    list-style: none;
-    text-decoration: none;
+.dropdown {
+    list-style: none; /* Это правило избыточно, так как оно уже применяется к ul */
 }
 
-.dropdown a:hover{
-    opacity: 0.5;
+.dropdown a:hover {
+    color: #B27A41;
     transition: 0.4s;
 }
 
-.time p{
-    color: #fff;
-    font-size: 15px;
+.time p {
+    color: #B27A41;
 }
 
-.dropdown-toggle{
+.dropdown-toggle {
     color: #fff;
     text-decoration: none;
-    font-size: ;
 }
 
-.dropdown-item{
+.dropdown-item {
     color: #fff;
     text-decoration: none;
-    font-size: 15px;
 }
 
 .main-content {
     position: relative;
-    height: 100vh;
+    height: 100vh; /* Лучше использовать min-height для адаптивности */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,31 +137,26 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -1; /* Можно использовать z-index только если это необходимо */
 }
 
 .overlay {
     color: #fff;
-    align-items: center;
+    align-items: center; /* Это свойство не имеет эффекта без display:flex */
 }
 
-.overlay h1{
-    font-size: 64px;
-    font-weight: medium;
+.overlay h1 {
+    font-weight: 500; /* Заменено medium на числовое значение */
 }
 
-.overlay p{
-    font-size: 22px;
+.overlay p {
     max-width: 830px;
     line-height: 28px;
     padding-top: 10px;
     text-align: center;
 }
 
-
-
-
-.reservation{
+.reservation {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -151,132 +164,115 @@ body {
     padding: 0 50px;
 }
 
-.reservation-form{
+.reservation-form {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1300px;
+    max-width: 1300px; /* Можно добавить min-width для лучшей адаптивности */
     gap: 20px;
 }
 
-.forma{
+.forma {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1300px;
+    max-width: 1300px; /* Можно добавить min-width для лучшей адаптивности */
     gap: 20px;
 }
 
-.click button{
-    border: solid #B27A41 2px;
+.click button {
+    border: solid #B27A41 2px; /* Упрощено */
     background-color:#B27A41;
     color: white;
-    font-size: 13px;
     width: 200px;
     height: 67px;
     margin-top: 51px;
 }
 
-.click button:hover{
-    background-color: #B27A41;
+.click button:hover {
+    background-color: #FFC300; /* Изменён цвет фона при наведении */
     transition: 0.3s;
-    color: #FFC300;
+    color: #B27A41;
     box-shadow: 0 0 15px #B27A41;
 }
 
-
-.labe{
+.labe { /* Возможно, стоит переименовать в .label для лучшего понимания */
     margin-top: 15px;
     max-width: 223px;
 }
 
-.labe label{
+.labe label { /* Возможно, стоит переименовать в .label label для лучшего понимания */
     color: #fff;
-    font-size: 15px;
 }
 
-.labe input{
+.labe input { /* Возможно, стоит переименовать в .label input для лучшего понимания */
     margin-top: 15px;
     border: solid #B27A41 4px;
     background-color: #4c2b1e;
     padding-left: 15px;
     width: 210px;
     height: 67px;
-    font-size: 13px;
     color: #796565;
-    font-family: "Bona Nova SC" ,serif;
 }
 
-
- .tex h2{
-    line-height: 60px;
-    font-size: 36px;
-    max-width: 400px;
-    text-align: center;
-    margin: 0 auto;
-    padding: 15px 0px;
-    color: #fff;
+.tex h2 {
+   line-height: 60px;
+   text-align: center;
+   margin: 0 auto;
+   padding: 15px 0;
+   color: #fff;
+   margin-top: 20px;
 }
 
-.tex p{
-    color: #B27A41;
-    font-size: 20px;
-    max-width: 710px;
-    line-height: 24px;
-    text-align: center;
-    padding-bottom: 15px;
-    margin: 0 auto;
+.tex p {
+   color: #B27A41;
+   max-width: 710px;
+   line-height: 24px;
+   text-align: center;
+   padding-bottom: 15px;
+   margin: 0 auto;
 }
 
-.push{
-    text-align: center;
-    margin-top: 25px;
-    font-size: 15px;
-    color: #fff;
+.push {
+   text-align: center;
+   margin-top: 25px;
+   color: #fff;
 }
-
 
 .about-us {
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
-    padding: 80px;
-    background-image: url("/img/fone1.png");
-    background-repeat: no-repeat;
-    background-position: 250px 50px;
+   display: flex;
+   justify-content: center;
+   margin-top: 100px;
+   background-image:url("/img/fone1.png");
+   background-repeat:no-repeat;
+   background-position:center top; /* Используйте более адаптивные значения */
 }
 
 .about-content {
-    padding: 100px 0 0 100px;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    
+   padding: 100px 0 0 200px;
+   display:grid;
+   grid-template-columns:1fr 2fr;
 }
-
 
 .contents h2 {
-    font-family: Arial, sans-serif;
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #fff;
+   margin-bottom :20px;
+   color:#fff;
 }
 
-.contents p{
-    font-size: 15px;
-    line-height: 18px;
-    max-width: 350px;
-    text-align: left;
-    color: #B27A41;
-    font-family: "Bona Nova SC" ,serif;
+.contents p {
+   line-height :18px;
+   max-width :350px;
+   text-align :left;
+   color :#B27A41;
+   margin-right: 20px;
 }
 
 .about-image img {
-    width: 1100px;
+   width :100%; /* Используйте более адаптивные значения */
+   max-width :1100px; /* Установите максимальную ширину для адаптивности */
 }
-
-
 .highlights {
     display: flex;
     justify-content: space-around;
-    padding: 50px 50px;
+    padding: 50px;
     background-color: #4c2b1e;
     color: #fff;
     text-align: center;
@@ -285,14 +281,24 @@ body {
 
 .highlight {
     flex: 1;
-    margin: 0 10px;
-    padding: 20px;
-    width: 345px;
-    height: 304px;
-    border-color: #B27A41;
-    border: #B27A41 solid 3px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin: 0;
+    width: 345px; /* Ширина карточки */
+    height: 304px; /* Высота карточки */
+    border: 3px solid #B27A41; /* Граница карточки */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Тень */
+    display: flex; /* Используем flexbox для центрирования содержимого */
+    flex-direction: column; /* Вертикальное выравнивание содержимого */
+    justify-content: center; /* Центрируем содержимое по вертикали */
+    align-items: center; /* Центрируем содержимое по горизонтали */
+    padding: 15px; /* Отступы внутри карточки */
+    box-sizing: border-box; /* Учитываем границы и отступы в размерах */
 }
+
+.highlight-description {
+    margin-top: 15px; /* Отступ сверху для описания */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
 
 .highlight img {
     width: 120px;
@@ -301,13 +307,11 @@ body {
 }
 
 .highlight h3 {
-    font-size: 20px;
     margin-bottom: 10px;
     padding-top: 17px;
 }
 
-.highlight p{
-    font-size: 15px;
+.highlight p {
     padding-top: 17px;
     color: #B27A41;
 }
