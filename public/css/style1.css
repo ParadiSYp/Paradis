@@ -380,6 +380,42 @@ h3 {
     height: 1000px;
 }
 
+.povar-text{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    align-items: center;
 
+}
 
+.povar-texts h1{
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Highnessa DEMO', sans-serif
+}
+
+.povar-texts{
+    width: 330px;
+    padding-top: 250px;
+}
+
+.povar-texts p{
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Highnessa DEMO', sans-serif;
+    text-align: justify;
+}
+
+.centr{
+    margin-top: -430px;
+    
+}
+
+.centr p{
+    text-align: center;
+    font-size: 36px;
+    font-family: 'Highnessa DEMO', sans-serif;
+}
 
