@@ -12,7 +12,7 @@ Auth::routes();
 
 // Главная страница
 Route::get('/', function () {
-    return view('basket'); // Это ваша главная страница
+    return view('one'); // Это ваша главная страница
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

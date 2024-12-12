@@ -136,11 +136,10 @@
                 </div>
             </form>
         </div>
-
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=" width="500" height="633" style="border:0;"
+    </div>
+    <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=" width="700" height="650" style="border:0;"
                 allowfullscreen="" loading="lazy"></iframe>
-        </div>
     </div>
 </main>
 

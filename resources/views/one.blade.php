@@ -176,6 +176,28 @@
     </section>
 
 
+    <section>
+        ....................
+        <div class="clicks">
+            <button type="submit">Посмотреть все меню</button>
+        </div>
+    </section>
+
+    <section class="kuhnya">
+        <h1>The best ingredients</h1>
+        <p>Мы очень гордимся тем, что тщательно подбираем ингредиенты для приготовления наших блюд, чтобы они были максимально вкусными и аутентичными. Мы можем достичь такого высокого уровня качества, только добавляя в наше меню особую тщательность, которую трудно найти в других ресторанах.</p>
+        <div class="ingri">
+            <img src="img/ingridient.png">
+        </div>
+    </section>
+
+    <section class="povar">
+           
+    </section>
+
+
+
+
 
 </body>
 </html>

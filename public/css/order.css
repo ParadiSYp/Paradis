@@ -3,6 +3,7 @@ body {
     color: white;
     margin: 0;
     padding: 0;
+    font-family: 'Highnessa DEMO', sans-serif;
 }
 
 main {
@@ -94,6 +95,12 @@ main {
     text-decoration: none;
 }
 
+main{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 .container {
     display: flex;
     /* Используем Flexbox для горизонтального расположения */
@@ -113,15 +120,16 @@ main {
     /* Максимальная ширина для карты */
 }
 
+
 .custom-radio {
     display: inline-block;
     text-align: center;
-    margin-right: 19px;
     cursor: pointer;
     border: 5px solid #B27A41;
     transition: background-color 0.3s;
-    padding: 18px 78px;
-    width: 30px;
+    padding: 18px 80px;
+    margin-right: 50px;
+
 }
 
 .custom-radio input {
@@ -153,6 +161,8 @@ main {
 .form-group input {
     cursor: pointer;
     border: 5px solid #B27A41;
+    color: #fff;
+    font-size: 20px;
     transition: background-color 0.3s;
     width: 480px;
     height: 54px;
@@ -167,10 +177,14 @@ main {
 .inline-fields input {
     width: 223px;
     height: 54px;
+    color: #fff;
+    font-size: 20px;
 }
 
 .form-input {
     margin-right: 20.5px;
+    color: #fff;
+    font-size: 20px;
 }
 
 .inline-fields div:last-child {
@@ -197,6 +211,8 @@ button {
     content: "";
     display: inline-block;
     vertical-align: middle;
+    color: #fff;
+    font-size: 20px;
 }
 
 .checkbox-group label {
@@ -208,6 +224,7 @@ button {
     background-color: #020202;
     /* Цвет заливки при выборе */
     margin-top: 15px;
+    
 }
 
 .checkbox-group {
@@ -224,4 +241,10 @@ button {
 
 .radio-groups {
     margin: 15px 0 15px;
+    align-items: center;
+}
+
+.form-group textarea {
+    color: #fff;
+font-size: 20px;
 }
