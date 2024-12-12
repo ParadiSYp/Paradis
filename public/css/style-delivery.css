@@ -1,0 +1,59 @@
+.delivery-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.delivery-subtitle {
+    color: #fff;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.delivery-content {
+    color: #B27B4B;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.delivery-prices {
+    margin-bottom: 40px;
+}
+
+.delivery-prices p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+.delivery-time {
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.delivery-time p {
+    line-height: 1.5;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.order-button {
+    border: solid #B27A41 2px; /* Упрощено */
+    background-color:#B27A41;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+}
+
+.order-button:hover {
+    background-color: #FFC300; /* Изменён цвет фона при наведении */
+    transition: 0.3s;
+    color: #B27A41;
+    box-shadow: 0 0 15px #B27A41;
+}
+

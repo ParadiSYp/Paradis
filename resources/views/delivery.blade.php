@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Paradis - French Restaurant</title>
-    <link rel="stylesheet" href="{{ asset('css/style-menu.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style1.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('css/style-delivery.css') }}">
 </head>
-<body>
+<br>
     <!-- Navigation Bar -->
     <header class="header">
         <nav class="navbar">
@@ -23,7 +21,7 @@
                         <li><a href="#">About Us</a></li>
                         <li><a href="menu">Menu</a></li>
                         <a href="/"><img src="img/logo.svg"></a>
-                        <li><a href="">Delivery</a></li>
+                        <li><a href="#">Delivery</a></li>
                         <li><a href="#">Reviews</a></li>
                     </ul>
                 </div>
@@ -74,64 +72,49 @@
     <!-- Main Content Section -->
     <main class="main-content">
         <div class="background-image">
-            <img src="{{ asset('img/menu_fon.jpg') }}" alt="Eiffel Tower Background">
+            <img src="{{ asset('img/fon_delivery.jpg') }}" alt="Eiffel Tower Background">
         </div>
         <div class="overlay">
-            <h1>Check out our gourmet Menu</h1>
-            <p>«Наше меню» – это дань уважения французской кухне. От нежного утиного конфи до изысканных десертов – мы предлагаем блюда, которые порадуют настоящих гурманов. Каждое блюдо создано с вниманием и любовью, чтобы передать традиции и мастерство мировых производителей, славящихся Францией.</p>
+            <h1>A taste of France at your home!</h1>
+            <p>Погрузитесь в атмосферу французской кухни, не выходя из дома!
+                Наш ресторан предлагает услугу доставки, чтобы вы могли насладиться изысканными блюдами прямо у себя на столе. </p>
         </div>
     </main>
 
-    <div class="container">
+    <div class="delivery-section">
         <div class="tex">
-        <h2>Perhaps you will like one of our dishes</h2>
-        <p class="subtitle">Каждое блюдо создано с вниманием и любовью, чтобы передать традиции и мастерство мировых производителей, славящихся Францией.</p>
+        <h2>Delivery services</h2>
         </div>
-        <!-- Навигация по категориям -->
-        <div class="navigation">
-            <button class="category-btn" data-category="soups">Супы</button>
-            <button class="category-btn" data-category="main_courses">Вторые блюда</button>
-            <button class="category-btn" data-category="snacks">Закуски</button>
-            <button class="category-btn" data-category="delicacies">Деликатесы</button>
-            <button class="category-btn" data-category="baking">Выпечка</button>
-            <button class="category-btn" data-category="desserts">Десерты</button>
-        </div>
+        <div class="delivery-content">
+            <h3 class="delivery-subtitle">Стоимость доставки</h3>
 
-        <!-- Карточки -->
-        <div class="cards-container">
-            @foreach ($dishes as $category => $items)
-                <div class="cards hidden" id="{{ $category }}">
-                    @foreach ($items as $dish)
-                        <div class="card">
-                            <img src="{{ asset('images/' . $dish['image']) }}" alt="{{ $dish['name'] }}">
-                            <h3>{{ $dish['name'] }}</h3>
-                            <p>{{ $dish['description'] }}</p>
-                            <div class="price-button-container">
-                                <p class="price">{{ $dish['price'] }} РУБ.</p>
-                                <button>В корзину</button>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            @endforeach
+            <div class="delivery-prices">
+                <p>Новый город, 40 к.с. Отрадна, Притяжение - 300 руб, от 2000 руб - бесплатно;</p>
+                <p>Чапаев, пр - 300 руб, от 2000 - бесплатно;</p>
+                <p>21, 24, 44, 65, 69 к.см - 350 руб, от 2000 руб - бесплатно;</p>
+                <p>МЖК - 400 руб, от 2000 руб - бесплатно;</p>
+                <p>Юсш к/са - 400 руб, от 2000 руб - бесплатно;</p>
+                <p>7ой микр - 400 руб, от 2000 - бесплатно;</p>
+                <p>ПСК - 400 руб - бесплатно;</p>
+                <p>Нижнегорск - 450 руб, от 2500 руб - бесплатно;</p>
+                <p>Садоводка - 600 руб, от 3000 руб - бесплатно;</p>
+                <p>М.Шоссе13 - 650 руб, от 10000 руб - бесплатно;</p>
+                <p>Прохлада - 700 руб, от 10000 руб - бесплатно;</p>
+                <p>Тепличный - 800 руб, от 10000 руб - бесплатно;</p>
+                <p>Заторы, баэс отрада - 850 руб, от 10000 - бесплатно;</p>
+            </div>
+
+            <div class="delivery-time">
+                <p>Время доставки - 60-90 минут, за город и в промзону - до 1,5 часов и, конечно, в зависимости от погодных условий время может меняться!</p>
+                <p>Заказы принимаются с 11.00 до 23.00 часов!</p>
+            </div>
+
+            <button class="order-button">
+                Перейти к оформлению
+            </button>
         </div>
     </div>
-    <script>
-        // Переключение категорий
-        const buttons = document.querySelectorAll('.category-btn');
-        const cards = document.querySelectorAll('.cards');
-        buttons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Скрыть все карточки
-                cards.forEach(card => card.classList.add('hidden'));
-                // Показать выбранную категорию
-                const category = button.getAttribute('data-category');
-                document.getElementById(category).classList.remove('hidden');
-            });
-        });
-        // Показать первую категорию по умолчанию
-        document.getElementById('soups').classList.remove('hidden');
-</script>
+
 
 <!-- Подвал -->
 <footer class="footer">
@@ -168,5 +151,3 @@
         </div>
     </div>
 </footer>
-</body>
-</html>

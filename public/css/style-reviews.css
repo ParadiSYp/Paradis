@@ -1,0 +1,51 @@
+/* Стили для блока столиков */
+.tables-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: normal;
+}
+
+.tables-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.table-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-item img {
+    height: auto;
+}
+
+.table-number {
+    position: absolute;
+    color: #000;
+    font-size: 18px;
+}
+
+/* Специфические стили для разных типов столиков */
+.long {
+    grid-column: span 2;
+}
+
+.square {
+    aspect-ratio: 1;
+}
+
+.round {
+    aspect-ratio: 1;
+}
+

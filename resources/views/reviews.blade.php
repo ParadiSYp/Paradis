@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paradis - French Restaurant</title>
     <link rel="stylesheet" href="{{ asset('css/style1.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style-reviews.css') }}">
+
 </head>
 <br>
     <!-- Navigation Bar -->
@@ -17,11 +19,11 @@
                 </div>
                 <div class="navbar-header">
                     <ul>
-                        <li><a href="/">About Us</a></li>
+                        <li><a href="#">About Us</a></li>
                         <li><a href="menu">Menu</a></li>
                         <a href="/"><img src="img/logo.svg"></a>
-                        <li><a href="delivery">Delivery</a></li>
-                        <li><a href="reviews">Reviews</a></li>
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">Reviews</a></li>
                     </ul>
                 </div>
                 <div class="user-icon">
@@ -71,11 +73,11 @@
     <!-- Main Content Section -->
     <main class="main-content">
         <div class="background-image">
-            <img src="{{ asset('img/fon.jpg') }}" alt="Eiffel Tower Background">
+            <img src="{{ asset('img/fon_reserve.jpg') }}" alt="Eiffel Tower Background">
         </div>
         <div class="overlay">
-            <h1>Try real French cuisine</h1>
-            <p>В нашем ресторане вы сможете насладиться истинными шедеврами французской кухни и погрузиться в атмосферу романтики Франции.</p>
+            <h1>Paradis is the place for any food-accompanied occasion!</h1>
+            <p>Будь то деловая встреча, семейный ужин по случаю дня рождения, юбилей, романтический ужин с предложением руки и сердца или любое другое мероприятие, мы позаботимся о том, чтобы атмосфера и блюда были подобраны по достоинству!</p>
         </div>
     </main>
 
@@ -143,79 +145,51 @@
             });
         </script>
 
-    <!-- About Us Section -->
-    <section class="about-us">
-        <div class="about-content">
-            <div class="contents">
-                <h2>About Us</h2>
-                <p>Ресторан «Paradis» — это уголок Франции в самом центре города. Мы приглашаем вас насладиться изысканными блюдами французской кухни, созданными из ингредиентов с вниманием к каждой детали. Каждое посещение — это уникальный гастрономический опыт, наполненный вкусами и ароматами, которые перенесут вас на улочки Парижа.</p>
-            </div>
-            <div>
-                <img src="img/povar.png" alt="Restourant povar">
-            </div>
-        </div>
-    </section>
+<div class="tables-container">
+    <div class="tex">
+    <p>Выберите понравившийся столик:</p>
+    </div>
 
-    <!-- Highlights Section -->
-    <section class="highlights">
-        <div class="highlight">
-            <img src="{{ asset('img/info1.svg') }}" alt="Drinks">
-            <h3>Напитки на любой вкус</h3>
-            <p>В нашем барном меню есть всё — от жареного эфиопского кофе до любых алкогольных напитков...</p>
+    <div class="tables-grid">
+        <!-- Столик 1 -->
+        <div class="table-item single">
+            <img src="img/sticker1.png" alt="Столик 1">
         </div>
-        <div class="highlight">
-            <img src="{{ asset('img/info2.svg') }}" alt="Comfort Zone">
-            <h3>Уютная, просторная зона!</h3>
-            <p>Наслаждайтесь нашими индивидуальными стендами, которые расположены в наших просторных, хорошо освещенных залах...</p>
-        </div>
-        <div class="highlight">
-            <img src="{{ asset('img/img3.svg') }}" alt="Variety of Menu">
-            <h3>Разнообразное меню</h3>
-            <p>У нас есть как мясные, так и вегетарианские блюда, а также вкусные десерты!</p>
-        </div>
-    </section>
 
-
-    <section>
-        <div class="contents-2">
-                <h2>Favorite dishes of our guests</h2>
-                <p>Наши любимые гости регулярно возвращаются к нам, чтобы насладиться своими излюбленными блюдами. В связи с этим мы рады представить вам специальную подборку самых популярных у наших посетителей кулинарных шедевров!…</p>
+        <!-- Столик 2 -->
+        <div class="table-item round">
+            <img src="img/sticker2.png" alt="Столик 2">
         </div>
-        <div class="keks">
-            <img src="img/keks.png" alt="">
+
+        <!-- Столик 3 -->
+        <div class="table-item single">
+            <img src="img/sticker3.png" alt="Столик 3">
         </div>
-        <div class="clicks">
-            <a href="menu"><button type="submit">Посмотреть все меню</button></a>
+
+        <!-- Столик 4 -->
+        <div class="table-item long">
+            <img src="img/sticker4.png" alt="Столик 4">
         </div>
-    </section>
 
-    <section class="kuhnya">
-        <h1>The best ingredients</h1>
-        <p>Мы очень гордимся тем, что тщательно подбираем ингредиенты для приготовления наших блюд, чтобы они были максимально вкусными и аутентичными. Мы можем достичь такого высокого уровня качества, только добавляя в наше меню особую тщательность, которую трудно найти в других ресторанах.</p>
-        <div class="ingri">
-            <img src="img/ingridient.png">
+        <!-- Столик 5 -->
+        <div class="table-item square">
+            <img src="img/sticker5.png" alt="Столик 5">
         </div>
-    </section>
 
-    <section class="povar">
-<<<<<<< Updated upstream
-       <div class="povar-text">
-            <div class="povar-texts">
-                <h1>Галичевин<br> Павел<br> Романович</h1>
-                <p>— настоящий мастер своего дела, для которого гастрономия — не просто профессия, а призвание.                  </p>
-            </div>
-            <div class="povar-texts centr">
-                <p>Our chef</p>
-            </div>
-            <div class="povar-texts">
-                <p>Уже в 16 лет, будучи еще школьником, Виктор впервые оказался на профессиональной кухне. Начав с роли помощника повара, он шаг за шагом постигал секреты ремесла, проходя все этапы — от повара до су-шефа, пока в 22 года не стал шефом. Этот стремительный путь говорит о его преданности делу, целеустремленности и таланте, которые помогают ему каждый день создавать настоящие шедевры.</p>
-            </div>
-       </div>    
-    </section>
+        <!-- Столики 6-8 -->
+        <div class="table-item square">
+            <img src="img/sticker6.png" alt="Столик 6">
+        </div>
 
-=======
+        <div class="table-item square">
+            <img src="img/sticker7.png" alt="Столик 7">
+        </div>
 
-    </section>
+        <div class="table-item round">
+            <img src="img/sticker8.png" alt="Столик 8">
+        </div>
+    </div>
+</div>
 
 <!-- Подвал -->
 <footer class="footer">
@@ -252,10 +226,3 @@
         </div>
     </div>
 </footer>
-
-
-
-
->>>>>>> Stashed changes
-</body>
-</html>
