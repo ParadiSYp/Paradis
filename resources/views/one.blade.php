@@ -198,7 +198,6 @@
     </section>
 
     <section class="povar">
-<<<<<<< Updated upstream
        <div class="povar-text">
             <div class="povar-texts">
                 <h1>Галичевин<br> Павел<br> Романович</h1>
@@ -212,9 +211,6 @@
             </div>
        </div>
     </section>
-
-=======
-
     </section>
 
 <!-- Подвал -->
@@ -252,10 +248,5 @@
         </div>
     </div>
 </footer>
-
-
-
-
->>>>>>> Stashed changes
 </body>
 </html>
