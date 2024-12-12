@@ -108,7 +108,7 @@
                             <p>{{ $dish['description'] }}</p>
                             <div class="price-button-container">
                                 <p class="price">{{ $dish['price'] }} РУБ.</p>
-                                <button>В корзину</button>
+                                <a href="check"><button>В корзину</button></a>
                             </div>
                         </div>
                     @endforeach

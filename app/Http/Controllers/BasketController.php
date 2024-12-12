@@ -8,8 +8,8 @@ class BasketController extends Controller
 {
     public function basket()
     {
-        return view('checkout.basket'); // Путь к вашему представлению
-   
+        return view('checkout.basket'); 
     }
 }
+
 
