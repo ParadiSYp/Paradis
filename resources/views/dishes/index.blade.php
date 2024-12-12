@@ -23,13 +23,13 @@
                         <li><a href="#">About Us</a></li>
                         <li><a href="menu">Menu</a></li>
                         <a href="/"><img src="img/logo.svg"></a>
-                        <li><a href="#">Delivery</a></li>
+                        <li><a href="">Delivery</a></li>
                         <li><a href="#">Reviews</a></li>
                     </ul>
                 </div>
                 <div class="user-icon">
                     <div>
-                        <a href="login"><img class="icons" src="{{ asset('img/corzina.svg') }}" alt="User Icon"></a>
+                        <a href="check"><img class="icons" src="{{ asset('img/corzina.svg') }}" alt="User Icon"></a>
                         <a href="login"><img class="icons" src="{{ asset('img/icon.svg') }}" alt="User Icon"></a>
                     </div>
                     @guest
