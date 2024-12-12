@@ -56,6 +56,7 @@ h3 {
 .navbar ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 40px;
 }
@@ -273,6 +274,7 @@ h3 {
 .highlights {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     padding: 50px;
     background-color: #4c2b1e;
     color: #fff;
@@ -485,4 +487,36 @@ h3 {
 
 .footer-column ul li a:hover {
     opacity: 1;
+}
+
+
+@media (max-width: 480px){
+    .keks{
+        display: none;
+    }
+    .about-us {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+     }  
+     .imgs{
+        display: none;
+     }
+     .forma{
+        margin-left: 75px;
+     }
+     .contents p{
+        width: 300px;
+     }
+     .about-content {
+        padding: 50px;
+        display:grid;
+        grid-template-columns:1fr 2fr;
+     }
+     .ingri img{
+        width: 480px;
+     }
+     .povar{
+        display: none;
+     }
 }
