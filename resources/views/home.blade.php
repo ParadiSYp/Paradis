@@ -26,7 +26,7 @@
                             </li>
                         @endif
                         <div class="lines">
-                            
+                        
                         </div>     
                         @if (Route::has('register'))
                             <li class="nav-item">
