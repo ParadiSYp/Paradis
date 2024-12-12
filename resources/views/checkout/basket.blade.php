@@ -83,7 +83,7 @@
             <div class="rectangle text_center_middle">Количество</div>
             <div class="rectangle text_center_middle">Цена</div>
         </div>
-        <a href="{{ route('checkout') }}">
+        <a href="{{ route('checkout.index') }}">
             <div class="form-btn">
                 <button type="submit">Перейти к офрмлению</button>
             </div>

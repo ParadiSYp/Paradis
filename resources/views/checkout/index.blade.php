@@ -71,21 +71,22 @@
 <main>
     <div class="container">
         <div class="form-container">
-            <form action="#" method="POST">
+            <form action="{{ route('orderout.submit') }}" method="POST">
+                @csrf <!-- Защита от CSRF-атак -->
                 <div class="radio-group">
                     <label class="custom-radio">
-                        <input type="radio" name="option" value="option1">
+                        <input type="radio" name="option" value="option1" required>
                         <span>Доставка</span>
                     </label>
                     <label class="custom-radio">
-                        <input type="radio" name="option" value="option2">
+                        <input type="radio" name="option" value="option2" required>
                         <span>Самовывоз</span>
                     </label>
                 </div>
                 <div class="form-group">
                     <input type="text" id="address" name="address" placeholder="Укажите адрес" required>
                 </div>
-
+            
                 <div class="form-group inline-fields">
                     <div class="form-input">
                         <input type="text" id="entrance" name="entrance" placeholder="Подъезд" required>
@@ -96,10 +97,10 @@
                 </div>
                 <div class="form-group inline-fields">
                     <div class="form-input">
-                        <input type="text" id="entrance" name="entrance" placeholder="Этаж" required>
+                        <input type="text" id="floor" name="floor" placeholder="Этаж" required>
                     </div>
                     <div>
-                        <input type="text" id="intercom" name="intercom" placeholder="Квартира" required>
+                        <input type="text" id="apartment" name="apartment" placeholder="Квартира" required>
                     </div>
                 </div>
                 <div class="checkbox-group">
@@ -109,31 +110,35 @@
                     </label>
                 </div>
                 <div class="form-group">
-                    <textarea id="comment" name="comment" rows="4" placeholder="Примечание к адресу" required></textarea>
+                    <textarea id="comment" name="comment" rows="4" placeholder="Примечание к адресу"></textarea>
                 </div>
                 <div class="checkbox-group">
                     <label>
-                        <input type="checkbox" name="private_home">
+                        <input type="checkbox" name="save_address">
                         Сохранить адрес для следующих заказов
                     </label>
                 </div>
                 <div class="radio-groups">
                     <label class="inline-radio">
-                        <input type="radio" name="payment_method" value="cash">
+                        <input type="radio" name="payment_method" value="cash" required>
                         <span>Наличные</span>
                     </label>
                     <label class="inline-radio">
-                        <input type="radio" name="payment_method" value="card">
+                        <input type="radio" name="payment_method" value="card" required>
                         <span>Картой</span>
                     </label>
                     <label class="inline-radio">
-                        <input type="radio" name="payment_method" value="transfer">
+                        <input type="radio" name="payment_method" value="transfer" required>
                         <span>Переводом</span>
                     </label>
                 </div>
                 <div class="form-btn">
                     <button type="submit">Оформить заказ</button>
                 </div>
+            
+                @if(session('success'))
+                    <div class="alert alert-success">{{ session('success') }}</div>
+                @endif
             </form>
         </div>
     </div>

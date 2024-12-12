@@ -26,7 +26,7 @@
                 </div>
                 <div class="user-icon">
                     <div>
-                        <a href="login"><img class="icons" src="{{ asset('img/corzina.svg') }}" alt="User Icon"></a>
+                        <a href="check"><img class="icons" src="{{ asset('img/corzina.svg') }}" alt="User Icon"></a>
                         <a href="login"><img class="icons" src="{{ asset('img/icon.svg') }}" alt="User Icon"></a>
                     </div>
                     @guest

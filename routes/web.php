@@ -7,6 +7,8 @@ use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\DishController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\BasketController;
+use App\Http\Controllers\OrderController;
 
 Auth::routes();
 
@@ -20,5 +22,9 @@ Route::post('/reserve', [ReservationController::class, 'store'])->name('reserve.
 Route::get('/menu', [DishController::class, 'index'])->name('dishes.index');
 
 Route::middleware('auth')->group(function () {
-Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
+
+Route::get('/orderout', [OrderController::class, 'showForm'])->name('orderout.form');
+Route::post('/orderout', [OrderController::class, 'submitForm'])->name('orderout.submit');
+Route::get('/check', [BasketController::class, 'basket'])->name('checkout.basket');
+Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout.index');
 });
