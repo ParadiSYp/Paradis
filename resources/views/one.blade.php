@@ -219,19 +219,19 @@
         <div class="footer-column">
             <h3>Каталог еды</h3>
             <ul>
-                <li><a href="#">Супы</a></li>
-                <li><a href="#">Вторые блюда</a></li>
-                <li><a href="#">Мясные</a></li>
-                <li><a href="#">Деликатесы</a></li>
-                <li><a href="#">Выпечка</a></li>
-                <li><a href="#">Десерты</a></li>
+                <li><a href="menu">Супы</a></li>
+                <li><a href="menu">Вторые блюда</a></li>
+                <li><a href="menu">Мясные</a></li>
+                <li><a href="menu">Деликатесы</a></li>
+                <li><a href="menu">Выпечка</a></li>
+                <li><a href="menu">Десерты</a></li>
             </ul>
         </div>
 
         <div class="footer-column">
             <h3>Компания</h3>
             <ul>
-                <li><a href="#">Меню ресторана</a></li>
+                <li><a href="menu">Меню ресторана</a></li>
                 <li><a href="#">Отзывы</a></li>
                 <li><a href="#">Доставка</a></li>
                 <li><a href="#">Контакты</a></li>
