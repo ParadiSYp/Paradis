@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 class OrderController extends Controller
 {
     public function showForm()
@@ -30,5 +29,12 @@ class OrderController extends Controller
         // Обработка данных заказа (например, сохранение в базе данных)
 
         return redirect()->back()->with('success', 'Ваш заказ успешно оформлен!');
+    }
+
+    // Добавляем метод submitOrder
+    public function submitOrder(Request $request)
+    {
+        // Здесь вы можете обработать заказ аналогично submitForm
+        return $this->submitForm($request); // Например, переадресуем на submitForm
     }
 }
