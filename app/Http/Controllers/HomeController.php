@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Dish;
 use Illuminate\Http\Request;
-
+use Illuminate\Contracts\Support\Renderable;
 class HomeController extends Controller
 {
     /**
@@ -19,10 +19,14 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @return Renderable
      */
-    public function index()
+    public function index(): Renderable // Указываем тип возвращаемого значения
     {
-        return view('home');
+        // Извлекаем все блюда из базы данных
+        $dishes = Dish::all();
+
+        // Возвращаем представление с данными для всех блюд
+        return view('one', compact('dishes'));
     }
 }

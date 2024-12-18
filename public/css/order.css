@@ -1,0 +1,250 @@
+body {
+    background: #4c2b1e;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Highnessa DEMO', sans-serif;
+}
+
+main {
+    margin: 50px 124px;
+}
+
+.header {
+    background-color: #4c2b1e;
+    padding-bottom: 20px;
+}
+
+.navbars {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-top: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    color: #B27A41;
+    transition: 0.4s;
+}
+
+.navbar-header {
+    margin: 0 auto;
+}
+
+.user-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.user-icon {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.line li {
+    list-style: none;
+    /* Это правило избыточно, так как оно уже применяется к ul */
+}
+
+.line li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.line li a:hover {
+    color: #B27A41;
+    transition: 0.4s;
+}
+
+.dropdown {
+    list-style: none;
+    /* Это правило избыточно, так как оно уже применяется к ul */
+}
+
+.dropdown a:hover {
+    color: #B27A41;
+    transition: 0.4s;
+}
+
+.time p {
+    color: #B27A41;
+}
+
+.dropdown-toggle {
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown-item {
+    color: #fff;
+    text-decoration: none;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.container {
+    display: flex;
+    /* Используем Flexbox для горизонтального расположения */
+    justify-content: space-between;
+    /* Распределение пространства между элементами */
+}
+
+.form-container,
+.map-container {
+    flex: 1;
+    margin-right: 124px;
+    /* Каждый элемент занимает равное место */
+}
+
+.map-container {
+    max-width: 400px;
+    /* Максимальная ширина для карты */
+}
+
+
+.custom-radio {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border: 5px solid #B27A41;
+    transition: background-color 0.3s;
+    padding: 18px 80px;
+    margin-right: 50px;
+
+}
+
+.custom-radio input {
+    display: none;
+}
+
+.custom-radio span {
+    background-color: none;
+}
+
+.custom-radio.selected {
+    background-color: #B27A41;
+    color: #FFF;
+}
+
+.custom-radio:hover {
+    background-color: #B27A41;
+    /* Цвет фона при наведении */
+}
+
+.radio-group {
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-top: 15px;
+}
+
+.form-group input {
+    cursor: pointer;
+    border: 5px solid #B27A41;
+    color: #fff;
+    font-size: 20px;
+    transition: background-color 0.3s;
+    width: 480px;
+    height: 54px;
+    background: none;
+}
+
+.inline-fields {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.inline-fields input {
+    width: 223px;
+    height: 54px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.form-input {
+    margin-right: 20.5px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.inline-fields div:last-child {
+    margin-right: 0;
+}
+
+button {
+    margin-top: 10px;
+}
+
+.radio-group label {
+    width: 50px;
+}
+
+.form-btn button {
+    width: 223px;
+    height: 67px;
+    color: #FFF;
+    background-color: #B27A41;
+    border: none;
+}
+
+.checkbox-group input[type="checkbox"] {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 20px;
+}
+
+.checkbox-group label {
+    position: relative;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"]:checked+label:before {
+    background-color: #020202;
+    /* Цвет заливки при выборе */
+    margin-top: 15px;
+    
+}
+
+.checkbox-group {
+    margin-top: 15px;
+}
+
+.form-group textarea {
+    width: 480px;
+    height: 100px;
+    border: 5px solid #B27A41;
+    background-color: transparent;
+    /* Прозрачный фон */
+}
+
+.radio-groups {
+    margin: 15px 0 15px;
+    align-items: center;
+}
+
+.form-group textarea {
+    color: #fff;
+font-size: 20px;
+}

@@ -1,0 +1,128 @@
+body {
+    background: #4c2b1e;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #4c2b1e;
+    padding-bottom: 20px;
+}
+
+.navbars {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-top: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    color: #B27A41;
+    transition: 0.4s;
+}
+
+.navbar-header {
+    margin: 0 auto;
+}
+
+.user-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.user-icon {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.line li {
+    list-style: none;
+    /* Это правило избыточно, так как оно уже применяется к ul */
+}
+
+.line li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.line li a:hover {
+    color: #B27A41;
+    transition: 0.4s;
+}
+
+.dropdown {
+    list-style: none;
+    /* Это правило избыточно, так как оно уже применяется к ul */
+}
+
+.dropdown a:hover {
+    color: #B27A41;
+    transition: 0.4s;
+}
+
+.time p {
+    color: #B27A41;
+}
+
+.dropdown-toggle {
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown-item {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    margin-left: 122px;
+    margin-right: 122px;
+}
+
+.basket {
+    margin-top: 50px;
+}
+
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.rectangle {
+    width: 100%;
+    height: 50px;
+    background: #B27A41;
+}
+
+.text_center_middle {
+    color: #ffffff;
+    text-align: center;
+    line-height: 50px;
+}
+
+.form-btn button {
+    width: 223px;
+    height: 67px;
+    color: #FFF;
+    background-color: #B27A41;
+    border: none;
+}
