@@ -5,6 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paradis - French Restaurant</title>
     <link rel="stylesheet" href="{{ asset('css/style1.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .container {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #B27A41;
+            margin: 0 120px 0 120px;
+        }
+        
+        form {
+            margin-top: 20px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #B27A41;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #4B2500;
+        }
+    </style>
 </head>
 <br>
     <!-- Navigation Bar -->
@@ -212,6 +245,25 @@
        </div>
     </section>
     </section>
+    <div class="container">
+        <h2>Отзывы</h2>
+        
+        @foreach($comments as $comment)
+            <div class="review">
+                <h3>{{ $comment->author }}</h3>
+                <p>{{ $comment->content }}</p>
+                <small>{{ $comment->created_at->format('d.m.Y H:i') }}</small>
+            </div>
+        @endforeach
+
+        <!-- Форма для добавления нового отзыва -->
+        <form action="{{ route('comments.store') }}" method="POST">
+            @csrf
+            <input type="text" name="author" placeholder="Ваше имя" required>
+            <textarea name="content" placeholder="Ваш отзыв" required></textarea>
+            <button type="submit">Отправить отзыв</button>
+        </form>
+    </div>
 
 <!-- Подвал -->
 <footer class="footer">

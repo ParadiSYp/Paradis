@@ -17,11 +17,11 @@
             </div>
             <div class="navbar-header">
                 <ul>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="/">About Us</a></li>
                     <li><a href="menu">Menu</a></li>
                     <a href="/"><img src="img/logo.svg"></a>
-                    <li><a href="#">Delivery</a></li>
-                    <li><a href="#">Reviews</a></li>
+                    <li><a href="delivery">Delivery</a></li>
+                    <li><a href="reviews">Reviews</a></li>
                 </ul>
             </div>
             <div class="user-icon">
@@ -86,7 +86,7 @@
                 <div class="form-group">
                     <input type="text" id="address" name="address" placeholder="Укажите адрес" required>
                 </div>
-            
+
                 <div class="form-group inline-fields">
                     <div class="form-input">
                         <input type="text" id="entrance" name="entrance" placeholder="Подъезд" required>
@@ -135,18 +135,52 @@
                 <div class="form-btn">
                     <button type="submit">Оформить заказ</button>
                 </div>
-            
-                @if(session('success'))
+
+                @if (session('success'))
                     <div class="alert alert-success">{{ session('success') }}</div>
                 @endif
             </form>
         </div>
     </div>
     <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=" width="700" height="650" style="border:0;"
-                allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=" width="600" height="650" style="border:0;"
+            allowfullscreen="" loading="lazy"></iframe>
     </div>
 </main>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-column">
+            <h3>Каталог еды</h3>
+            <ul>
+                <li><a href="#">Супы</a></li>
+                <li><a href="#">Вторые блюда</a></li>
+                <li><a href="#">Мясные</a></li>
+                <li><a href="#">Деликатесы</a></li>
+                <li><a href="#">Выпечка</a></li>
+                <li><a href="#">Десерты</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Компания</h3>
+            <ul>
+                <li><a href="#">Меню ресторана</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Бронирование</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Контакты</h3>
+            <ul>
+                <li><a href="mailto:example@mail.com">example@mail.com</a></li>
+                <li>Чуйкова 55/1 (БЦ) Блахауз дд 69/67</li>
+                <li><a href="tel:+7999999999">+7 999 999 99 99</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
 
 </html>
 <script>

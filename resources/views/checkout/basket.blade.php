@@ -17,11 +17,11 @@
             </div>
             <div class="navbar-header">
                 <ul>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="/">About Us</a></li>
                     <li><a href="menu">Menu</a></li>
                     <a href="/"><img src="img/logo.svg"></a>
-                    <li><a href="#">Delivery</a></li>
-                    <li><a href="#">Reviews</a></li>
+                    <li><a href="delivery">Delivery</a></li>
+                    <li><a href="reviews">Reviews</a></li>
                 </ul>
             </div>
             <div class="user-icon">
@@ -33,14 +33,14 @@
                     <div class="line">
                         @if (Route::has('login'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Вход') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">{{ 'Вход' }}</a>
                             </li>
                         @endif
                         <div class="lines">
                         </div>
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Регистрация') }}</a>
+                                <a class="nav-link" href="{{ route('register') }}">{{ 'Регистрация' }}</a>
                             </li>
                         @endif
                     </div>
@@ -57,7 +57,6 @@
                                          document.getElementById('logout-form').submit();">
                                 {{ __('Выйти') }}
                             </a>
-
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
                             </form>
@@ -90,5 +89,39 @@
         </a>
     </main>
 </body>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-column">
+            <h3>Каталог еды</h3>
+            <ul>
+                <li><a href="#">Супы</a></li>
+                <li><a href="#">Вторые блюда</a></li>
+                <li><a href="#">Мясные</a></li>
+                <li><a href="#">Деликатесы</a></li>
+                <li><a href="#">Выпечка</a></li>
+                <li><a href="#">Десерты</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Компания</h3>
+            <ul>
+                <li><a href="#">Меню ресторана</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Бронирование</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Контакты</h3>
+            <ul>
+                <li><a href="mailto:example@mail.com">example@mail.com</a></li>
+                <li>Чуйкова 55/1 (БЦ) Блахауз дд 69/67</li>
+                <li><a href="tel:+7999999999">+7 999 999 99 99</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
 
 </html>

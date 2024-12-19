@@ -126,3 +126,71 @@ main {
     background-color: #B27A41;
     border: none;
 }
+
+/* Стили для подвала */
+.footer {
+    background-color: #3d2112;
+    padding: 40px 0;
+    margin-top: 60px;
+}
+
+.contents-2 h2{
+    text-align: center;
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+}
+
+.contents-2 p{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    max-width: 700px;
+    padding-top: 20px;
+}
+
+.keks{
+    padding: 40px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.footer-column h3 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.footer-column ul {
+    color: #B27A41;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    color: #B27A41;
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #B27A41;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.footer-column ul li a:hover {
+    opacity: 1;
+}

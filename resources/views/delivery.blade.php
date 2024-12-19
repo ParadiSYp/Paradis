@@ -18,11 +18,11 @@
                 </div>
                 <div class="navbar-header">
                     <ul>
-                        <li><a href="#">About Us</a></li>
+                        <li><a href="/">About Us</a></li>
                         <li><a href="menu">Menu</a></li>
                         <a href="/"><img src="img/logo.svg"></a>
-                        <li><a href="#">Delivery</a></li>
-                        <li><a href="#">Reviews</a></li>
+                        <li><a href="delivery">Delivery</a></li>
+                        <li><a href="reviews">Reviews</a></li>
                     </ul>
                 </div>
                 <div class="user-icon">
