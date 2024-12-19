@@ -4,13 +4,26 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Cart extends Model
 {
-    protected $fillable = ['dish_id', 'quantity'];
+    use HasFactory;
 
-    public function dish()
+    protected $fillable = [
+        'user_id',
+        'product_id',
+        'amount'
+    ];
+
+    public function products(): HasMany
     {
-        return $this->belongsTo(Dish::class);
+        return $this->hasMany(Dish::class);
+    }
+
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
     }
 }

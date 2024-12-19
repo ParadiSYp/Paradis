@@ -28,3 +28,11 @@ Route::post('/orderout', [OrderController::class, 'submitForm'])->name('orderout
 Route::get('/check', [BasketController::class, 'basket'])->name('checkout.basket');
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout.index');
 });
+
+Route::get('/basket/index', 'CartController@index')->name('basket.index');
+Route::get('/basket/checkout', 'CartController@checkout')->name('basket.checkout');
+
+
+Route::get('/check', [CartController::class, 'index'])->name('carts.index')->middleware('auth');
+Route::post('/orderout', [CartController::class, 'store'])->name('carts.store')->middleware('auth');
+Route::delete('/check/{cart}', [CartController::class, 'destroy'])->name('carts.destroy')->middleware('auth');

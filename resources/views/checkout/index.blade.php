@@ -72,7 +72,7 @@
     <div class="container">
         <div class="form-container">
             <form action="{{ route('orderout.submit') }}" method="POST">
-                @csrf <!-- Защита от CSRF-атак -->
+                @csrf
                 <div class="radio-group">
                     <label class="custom-radio">
                         <input type="radio" name="option" value="option1" required>
