@@ -79,36 +79,22 @@
 
     @if(count($cartItems) > 0)
 
-    <div class="parent">
-
-        <div class="rectangle text_center_middle">№</div>
-        <div class="rectangle text_center_middle">Фото</div>
-        <div class="rectangle text_center_middle">Название блюда</div>
-        <div class="rectangle text_center_middle">Цена за шт.</div>
-        <div class="rectangle text_center_middle">Количество</div>
-        <div class="rectangle text_center_middle">Цена</div>
-
-    </div>
-
     @foreach ($cartItems as $item)
-        <div class="card">
-            <img src="{{ asset('images/' . $item->products[0]->image) }}" alt="{{ $item->products[0]->name }}">
-            <h3>{{ $item->products[0]->name }}</h3>
-            <div class="price-button-container">
-                <p class="price">{{ $item->products[0]->price }} РУБ.</p>
-                <input type="hidden" name="cart_id" value="{{ $item->id }}">
-            </div>
-        </div>
-    @endforeach
-
-    @else
-        <p>Корзина пуста</p>
-    @endif
-        <a href="{{ route('checkout.index') }}">
+                    <div class="card">
+                        <img src="{{ asset('images/' . $item['image']) }}" alt="Продукт">
+                        <h3>{{ $item['name'] }}</h3>
+                        <p>Количество: {{ $item['amount'] }}</p>
+                        <p>Цена: {{ number_format(floatval($item['price']), 2) }}</p>
+                    </div>
+                @endforeach
+    <a href="{{ route('checkout.index') }}">
             <div class="form-btn">
                 <button type="submit">Перейти к офрмлению</button>
             </div>
         </a>
+    @else
+        <p>Корзина пуста</p>
+    @endif
     </main>
 </body>
 

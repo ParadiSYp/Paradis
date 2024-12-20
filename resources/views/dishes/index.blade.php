@@ -99,27 +99,32 @@
 
         <!-- Карточки -->
         <form method="POST" action="{{ route('carts.store') }}">
-            @csrf
-            <div class="cards-container">
-                @foreach ($dishes as $category => $items)
-                    <div class="cards hidden" id="{{ $category }}">
-                        @foreach ($items as $dish)
-                            <div class="card">
-                                <img src="{{ asset('images/' . $dish->image) }}" alt="{{ $dish->name }}">
-                                <h3>{{ $dish->name }}</h3>
-                                <p>{{ $dish->description }}</p>
-                                <div class="price-button-container">
-                                    <p class="price">{{ $dish->price }} РУБ.</p>
-                                    <input type="hidden" name="user_id" value="{{ Auth::id() }}">
-                                    <input type="hidden" name="product_id" value="{{ $dish->cart_id }}">
-                                    <button type="submit">В корзину</button>
+                @csrf
+                <div class="cards-container">
+                    @foreach ($dishes as $category => $items)
+                        <div class="cards hidden" id="{{ $category }}">
+                            @foreach ($items as $dish)
+                                <div class="card">
+                                    <img src="{{ asset('images/' . $dish->image) }}" alt="{{ $dish->name }}">
+                                    <h3>{{ $dish->name }}</h3>
+                                    <p>{{ $dish->description }}</p>
+                                    <div class="price-button-container">
+                                        <p class="price">{{ $dish->price }} РУБ.</p>
+                                        <input type="hidden" name="user_id" value="{{ Auth::id() }}">
+                                        <button type="submit" name="product_id" value="{{ $dish->id }}">В корзину</button>
+                                    </div>
                                 </div>
-                            </div>
-                        @endforeach
-                    </div>
-                @endforeach
-            </div>
-        </form>
+                            @endforeach
+                        </div>
+                    @endforeach
+                </div>
+</form>
+
+
+
+
+
+
 
 
     </div>

@@ -57,6 +57,15 @@
                                 {{ __('Выйти') }}
                             </a>
 
+
+                            @if(\Illuminate\Support\Facades\Auth::check())
+                                @if(\Illuminate\Support\Facades\Auth::user()->role === 'admin')
+                                    <a class="dropdown-item" href="/admin">Админ панель</a>
+                                @endif
+                                <p></p>
+                            @endif
+
+
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
                             </form>

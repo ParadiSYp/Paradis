@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+Use App\Models\Order;
 use Illuminate\Http\Request;
 class OrderController extends Controller
 {
@@ -16,18 +16,15 @@ class OrderController extends Controller
         $validatedData = $request->validate([
             'option' => 'required|string',
             'address' => 'required|string|max:255',
-            'entrance' => 'required|string|max:10',
-            'intercom' => 'required|string|max:10',
-            'floor' => 'required|string|max:10',
-            'apartment' => 'required|string|max:10',
-            'private_home' => 'nullable|boolean',
-            'comment' => 'nullable|string|max:500',
-            'save_address' => 'nullable|boolean',
-            'payment_method' => 'required|string',
+            'comment' => 'nullable|string|max:500'
         ]);
 
         // Обработка данных заказа (например, сохранение в базе данных)
-
+        $order = new Order();
+        $order->fill($validatedData);
+        $order->user_id = auth()->id();
+        // Сохраняем заказ
+        $order->save();
         return redirect()->back()->with('success', 'Ваш заказ успешно оформлен!');
     }
 
@@ -35,6 +32,6 @@ class OrderController extends Controller
     public function submitOrder(Request $request)
     {
         // Здесь вы можете обработать заказ аналогично submitForm
-        return $this->submitForm($request); // Например, переадресуем на submitForm
+        return view('checkout.index');
     }
 }

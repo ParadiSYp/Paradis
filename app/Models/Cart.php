@@ -14,12 +14,12 @@ class Cart extends Model
     protected $fillable = [
         'user_id',
         'product_id',
-        'amount'
+        'amount',
     ];
 
-    public function products(): HasMany
+    public function dish(): BelongsTo
     {
-        return $this->hasMany(Dish::class);
+        return $this->belongsTo(Dish::class);
     }
 
     public function user(): BelongsTo

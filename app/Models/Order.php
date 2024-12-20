@@ -6,20 +6,24 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Dish extends Model
+class Order extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'name',
-        'category',
-        'description',
-        'price',
-        'image'
+        'option',
+        'address',
+        'comment',
+
     ];
 
-    public function cart()
+    public function user(): BelongsTo
     {
-        return $this->hasOne(Cart::class);
+        return $this->belongsTo(User::class);
     }
+    public function orderItems()
+{
+    return $this->hasMany(OrderItem::class);
+}
+
 }
