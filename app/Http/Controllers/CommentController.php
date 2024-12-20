@@ -16,8 +16,8 @@ class CommentController extends Controller
     public function store(Request $request)
 {
     $request->validate([
-        'author' => 'required|string|max:255',
-        'content' => 'required|string',
+        'author' => 'required|alpha|max:255',
+        'content' => 'required|max:1000',
     ]);
 
     Comment::create($request->only(['author', 'content']));
